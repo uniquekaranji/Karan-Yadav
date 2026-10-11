@@ -28,7 +28,7 @@
         <p class="intro-text">Sign in to continue your learning journey and pick up where you left off.</p>
       </div>
 
-      <form class="login-form" action="#" method="get">
+      <form class="login-form" id="login-form" action="#" method="post">
         <div class="form-group">
           <label for="email">Email address</label>
           <input
@@ -65,6 +65,9 @@
           <span>Sign in</span>
           <span class="button-arrow" aria-hidden="true">→</span>
         </button>
+        <p class="form-feedback" id="form-feedback" role="status" aria-live="polite" hidden>
+          Demo only — connect a backend to enable real sign-in.
+        </p>
       </form>
 
       <div class="divider"><span>NEW TO THE CLUB?</span></div>
@@ -80,5 +83,13 @@
 
     <p class="page-note">A small step today. A stronger skill tomorrow.</p>
   </main>
+
+  <script>
+    // This is a front-end learning project; no credentials are sent to a server.
+    document.getElementById("login-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.getElementById("form-feedback").hidden = false;
+    });
+  </script>
 </body>
 </html>
