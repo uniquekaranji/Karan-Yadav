@@ -421,3 +421,19 @@ h1 span {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+.form-feedback {
+  margin: -5px 0 0;
+  padding: 10px 12px;
+  border: 1px solid #dedbff;
+  border-radius: 9px;
+  background: #f7f6ff;
+  color: #5143cf;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.form-feedback[hidden] {
+  display: none;
+}
